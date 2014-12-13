@@ -1,6 +1,19 @@
-.designImg > img{
+img.designImg {
   width: 200px;
   height: 200px;
-  background-color: orange;
+  background-color: tomato;
   display: inline-block;
+  box-shadow: 1px 1px 1px #999;
+}
+img.designImg:hover{
+  
+/*  transition: width 1s;*/
+  
+  z-index: 100;
+  position: absolute;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
 }
