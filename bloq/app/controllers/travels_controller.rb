@@ -13,6 +13,3 @@ class TravelsController < ApplicationController
 
 end
 
-# success: function(data){
-#       console.log('success', data);
-#     }
