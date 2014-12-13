@@ -17,11 +17,11 @@ app
 
 
 
-  $.ajax({
-    type: "GET",
-    url: "/api/v1/designs",
-    dataType: "json",
-    success: function(data){
-        console.log('success',data) // Will alert Max
-    }        
+  // $.ajax({
+  //   type: "GET",
+  //   url: "/api/v1/designs",
+  //   dataType: "json",
+  //   success: function(data){
+  //       console.log('success',data) // Will alert Max
+  //   }        
 });

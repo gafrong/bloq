@@ -8,11 +8,11 @@
 //     return Design;
 //   });
 
-$.ajax({
-    type: "GET",
-    url: "/api/v1/designs",
-    dataType: "json",
-    success: function(data){
-        console.log() // Will alert Max
-    }        
-});
+// $.ajax({
+//     type: "GET",
+//     url: "/api/v1/designs",
+//     dataType: "json",
+//     success: function(data){
+//         console.log() // Will alert Max
+//     }        
+// });
