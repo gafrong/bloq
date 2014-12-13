@@ -1,14 +1,11 @@
 
 <h1>{{outputDesign}}</h1>
 
-  <% @designs.each do |des| %>
+  <% @show_all.each do |image| %>
+    <img src="<%= image.img_url %>" class="designImg">
+  <% end %>  
 
-    <img src="<%= des.img_url %>" class="designImg">
-
-    
-  <% end %>
-
-
+  
 
 
 <!-- 
@@ -30,6 +27,18 @@
 </section> -->
 
 
-  
-         
-     
+<script>
+var $button = $('.designImg')
+
+$button.on('click', function(){
+    
+
+    var options = {
+      url: 'http://www.bloq.herokuapp.com/v1/api/designs',
+      type: 'GET',
+      dataType: 'json'
+    }
+    $.ajax(options).done();
+
+  });         
+</script>     

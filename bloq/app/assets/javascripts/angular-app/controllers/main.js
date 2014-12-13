@@ -1,7 +1,7 @@
 app
   .controller('MainCtrl', 
     function($scope){
-     $scope.outputDesign = 'design';
+     $scope.outputDesign = 'bloq';
   })
 
 // app

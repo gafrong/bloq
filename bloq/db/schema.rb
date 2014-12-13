@@ -11,13 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141213033827) do
+ActiveRecord::Schema.define(version: 20141213212355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "designs", force: true do |t|
     t.text     "info"
+    t.text     "img_url"
+    t.text     "link_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "travels", force: true do |t|
+    t.text     "title"
     t.text     "img_url"
     t.text     "link_url"
     t.datetime "created_at"
