@@ -1,0 +1,30 @@
+
+<h1>{{outputDesign}}</h1>
+
+
+<input type="text" ng-model="outputDesign">
+
+
+
+
+<section ng-controller="MainCtrl">
+  <ng-view></ng-view>
+  
+
+  <section id="main" ng-show="designs.length" ng-cloak>
+
+
+    <ul id="todo-list">
+      <li ng-repeat="design in designs">
+
+      </li>
+    </ul>
+  </section>
+
+</section>
+
+
+
+  
+         
+     
