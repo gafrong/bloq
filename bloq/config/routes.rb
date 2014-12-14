@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
 
   namespace :api, defaults: {format: :json} do
-    namespace :v1 do
+    namespace :v2 do
       resources :travels, :only => [:index]
     end
   end
