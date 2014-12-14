@@ -12,5 +12,10 @@ module Api
         respond_with(Travel.find(params[:id]))
       end
 
+    private
+      def todo_params
+        params.require(:travel).permit(:info)
+      end
+    end
   end
 end
