@@ -14,7 +14,7 @@ module Api
 
     private
       def todo_params
-        params.require(:travel).permit(:info)
+        params.require(:travel).permit(:title)
       end
     end
   end
