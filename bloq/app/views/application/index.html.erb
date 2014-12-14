@@ -1,14 +1,12 @@
-<div class="nodeco" ng-controller="BloqCtrl">
-  {{title}}
-
+<div ng-controller="HeaderCtrl">
+  <h1>{{ outputDesign | uppercase }}</h1>
+</div>
+  
+<div class="nodeco" ng-controller="DesignCtrl">
   <ul>
     <li ng-repeat="design in designs">
-      <img src="{{ design.img_url}}" alt="" class="designImg">
+      <img ng-src="{{ design.img_url}}" alt="" class="designImg">
     </li>
-<!--     <li ng-repeat="design in designs">
-      {{ design.info}}
-    </li> -->
-<!--     <li ng-repeat="design in designs">{{design.img_url}}</li> -->
   </ul>
 </div>
 
@@ -16,7 +14,7 @@
 
 
 
-<!-- 
+<!-- using rails to populate image
 <div ng-controller="HeaderCtrl">
   
   <h1>{{outputDesign}}</h1>

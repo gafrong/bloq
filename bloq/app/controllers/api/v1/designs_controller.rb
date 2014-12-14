@@ -12,8 +12,6 @@ module Api
         respond_with(Design.find(params[:id]))
       end
 
-
-
     private
       def todo_params
         params.require(:design).permit(:info)

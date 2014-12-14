@@ -2,10 +2,6 @@ Rails.application.routes.draw do
 
   root "application#index"
 
-  resources :designs, :only => [:index]
-  resources :travels, :only => [:index]
-  resources :foods, :only => [:index]
-  resources :techs, :only => [:index]
 
   namespace :api, defaults: {format: :json} do
     namespace :v1 do  
@@ -30,4 +26,8 @@ Rails.application.routes.draw do
       resources :techs, :only => [:index]
     end
   end
+  # resources :designs, :only => [:index]
+  # resources :travels, :only => [:index]
+  # resources :foods, :only => [:index]
+  # resources :techs, :only => [:index]
 end

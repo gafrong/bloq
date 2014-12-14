@@ -13,9 +13,11 @@ img.designImg {
   text-decoration: none;
 }
 img.designImg:hover{ 
-/*  transition: width 1s;*/
+/*  transition: width 1s;
    z-index: 100;
-  position: absolute;
+  position: absolute;*/
+  box-shadow: 5px 5px 5px #777;
+  transition: box-shadow 0.4s;
 }
 
 .nodeco ul li{
