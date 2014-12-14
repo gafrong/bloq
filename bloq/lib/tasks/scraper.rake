@@ -87,6 +87,35 @@ namespace :scraper do
       @food.link_url = link_food[i]
       @food.save
     end
+
+    # tech data scrape
+    url_tech = "http://www.wired.com/"
+    page_tech = Nokogiri::HTML(open(url_tech))
+        
+
+    info_tech = []
+    img_tech = []
+    link_tech = []
+
+    page_tech.css('div.s div.headline h5').each do |line|
+      info_tech << line.to_s.slice(4..-6)
+    end
+
+    page_tech.css('div.s div.pic img').each do |line|
+      img_tech << line.to_s.slice(10..-3)
+    end
+
+    link_tech = page_tech.css('div.s div.pic a').map {|link| link['href']}
+
+    puts link_tech
+
+    info_tech.length.times do |i|
+      @tech = Tech.new
+      @tech.title = info_tech[i]
+      @tech.img_url = img_tech[i]
+      @tech.link_url = link_tech[i]
+      @tech.save
+    end
   end
 
   desc "TODO"

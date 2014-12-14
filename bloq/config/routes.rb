@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :designs, :only => [:index]
   resources :travels, :only => [:index]
   resources :foods, :only => [:index]
+  resources :teches, :only => [:index]
 
   namespace :api, defaults: {format: :json} do
     namespace :v1 do  
@@ -21,6 +22,12 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     namespace :v3 do
       resources :foods, :only => [:index]
+    end
+  end
+
+  namespace :api, defaults: {format: :json} do 
+    namespace :v4 do 
+      resources :teches, :only => [:index]
     end
   end
 end
