@@ -8,9 +8,9 @@ class ApplicationController < ActionController::Base
     @designs = Design.all
     @travels = Travel.all
     @foods = Food.all
-    @teches = Tech.all
+    @techs = Tech.all
 
-    @show_all = (@travels + @designs + @foods + @teches).shuffle
+    @show_all = (@travels + @designs + @foods + @techs).shuffle
 
     respond_to do |format|
       format.html {}

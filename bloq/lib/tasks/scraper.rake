@@ -89,7 +89,7 @@ namespace :scraper do
     end
 
     # tech data scrape
-    url_tech = "http://www.wired.com/"
+    url_tech = "http://www.techlife.net/"
     page_tech = Nokogiri::HTML(open(url_tech))
         
 
@@ -97,17 +97,14 @@ namespace :scraper do
     img_tech = []
     link_tech = []
 
-    page_tech.css('div.s div.headline h5').each do |line|
-      info_tech << line.to_s.slice(4..-6)
+    page_tech.css('header h2').each do |line|
+      info_tech << line.text
     end
 
-    page_tech.css('div.s div.pic img').each do |line|
-      img_tech << line.to_s.slice(10..-3)
-    end
+    img_tech = page_tech.css('header a img.wp-post-image').map {|link| link['src']}
 
-    link_tech = page_tech.css('div.s div.pic a').map {|link| link['href']}
+    link_tech = page_tech.css('header h2 a').map {|link| link['href']}
 
-    puts link_tech
 
     info_tech.length.times do |i|
       @tech = Tech.new
