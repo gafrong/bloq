@@ -7,12 +7,13 @@ class ApplicationController < ActionController::Base
   def index
     @designs = Design.all
     @travels = Travel.all
+    @foods = Food.all
 
-    @show_all = (@travels + @designs).shuffle
-    
+    @show_all = (@travels + @designs + @foods).shuffle
+
     respond_to do |format|
       format.html {}
-      format.json { render :json => @designs }
+      format.json { render :json => @show_all }
     end
   end
   

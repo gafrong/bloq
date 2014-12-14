@@ -1,3 +1,5 @@
+# Scrapes Resources for database
+
 namespace :scraper do
   desc "Fetch design posts from Wallpaper"
   task scrape: :environment do
@@ -57,6 +59,33 @@ namespace :scraper do
       @travel.img_url = img_travel[i]
       @travel.link_url = link_travel[i*2]
       @travel.save
+    end
+
+    # food data scrape
+    url_food = "http://www.theworlds50best.com/"
+    page_food = Nokogiri::HTML(open(url_food))
+        
+
+    info_food = []
+    img_food = []
+    link_food = []
+
+    page_food.css('li.lead').each do |line| 
+      info_food << line.text
+    end
+
+    page_food.css('div.he-pos-one img').each do |line|
+      img_food << "http://www.theworlds50best.com" +line.to_s.slice(10..-3)
+    end
+
+    link_food = page_food.css('div.he-pos-one a').map {|link| "http://www.theworlds50best.com" + link["href"]}
+
+    info_food.length.times do |i|
+      @food = Food.new
+      @food.title = info_food[i]
+      @food.img_url = img_food[i]
+      @food.link_url = link_food[i]
+      @food.save
     end
   end
 
