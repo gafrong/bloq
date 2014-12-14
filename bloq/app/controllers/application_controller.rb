@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
 
   def index
+
     @designs = Design.all
     @travels = Travel.all
     @foods = Food.all

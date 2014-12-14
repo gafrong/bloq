@@ -1,3 +1,8 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
 img.designImg {
   width: 200px;
   height: 200px;
@@ -5,16 +10,18 @@ img.designImg {
   display: inline-block;
   box-shadow: 1px 1px 1px #999;
   position: relative;
+  text-decoration: none;
 }
-img.designImg:hover{
-  
+img.designImg:hover{ 
 /*  transition: width 1s;*/
-  
-  z-index: 100;
+   z-index: 100;
   position: absolute;
 }
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
+
+.nodeco ul li{
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px;
 }
+
+
