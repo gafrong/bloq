@@ -1,12 +1,12 @@
 var app = angular.module('app', ['ui.router', 'ngResource']);
 
-app.config(function($stateProvider, $urlRouterProvider) {
+app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise("/");
 
     $stateProvider
       .state('/', {
-        url : '/'
+        url        : '/'
       })
       .state('design', {
         url        : '/design',
@@ -29,4 +29,4 @@ app.config(function($stateProvider, $urlRouterProvider) {
         controller : 'TravelCtrl'
       })
 
-  });
+  }]);
