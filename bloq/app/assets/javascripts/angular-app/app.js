@@ -10,22 +10,22 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
       })
       .state('design', {
         url        : '/design',
-        templateUrl: "assets/templates/designIndex.html",
+        templateUrl: "/assets/templates/designIndex.html",
         controller : 'DesignCtrl'
       })
       .state('tech', {
         url        : '/tech',
-        templateUrl: "assets/templates/techIndex.html",
+        templateUrl: "/assets/templates/techIndex.html",
         controller : 'TechCtrl'
       }) 
       .state('food', {
         url        : '/food',
-        templateUrl: "assets/templates/foodIndex.html",
+        templateUrl: "/assets/templates/foodIndex.html",
         controller : 'FoodCtrl'
       }) 
       .state('travel', {
         url        : '/travel',
-        templateUrl: "assets/templates/travelIndex.html",
+        templateUrl: "/assets/templates/travelIndex.html",
         controller : 'TravelCtrl'
       })
 
