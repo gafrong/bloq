@@ -3,7 +3,7 @@ app
     $scope.title = "Tech";
     $scope.designs = [];
     var getTechs = function () {
-      $http.get('/api/v4/techs')
+      $http.get('/api/v1/techs')
         .success(function(data){
           console.log(data);
           $scope.techs = data;

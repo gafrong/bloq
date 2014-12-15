@@ -3,7 +3,7 @@ app
     $scope.title = "Food";
     $scope.foods = [];
     var getFoods = function () {
-      $http.get('/api/v3/foods')
+      $http.get('/api/v1/foods')
         .success(function(data){
           console.log(data);
           $scope.foods = data;

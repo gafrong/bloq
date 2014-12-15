@@ -3,7 +3,7 @@ app
     $scope.title = "Travel";
     $scope.travels = [];
     var getTravels = function () {
-      $http.get('/api/v2/travels')
+      $http.get('/api/v1/travels')
         .success(function(data){
           $scope.travels = data;
         })

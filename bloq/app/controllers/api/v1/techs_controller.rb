@@ -1,5 +1,5 @@
 module Api
-  module V4
+  module V1
     class TechsController < ApplicationController
       skip_before_filter :verify_authenticity_token
       respond_to :json

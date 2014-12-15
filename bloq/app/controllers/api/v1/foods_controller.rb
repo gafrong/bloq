@@ -1,20 +1,20 @@
 module Api
-  module V2
-    class TravelsController < ApplicationController
+  module V1
+    class FoodsController < ApplicationController
       skip_before_filter :verify_authenticity_token
       respond_to :json
 
       def index
-        respond_with(Travel.all)
+        respond_with(Food.all)
       end
 
       def show
-        respond_with(Travel.find(params[:id]))
+        respond_with(Food.find(params[:id]))
       end
 
     private
       def todo_params
-        params.require(:travel).permit(:title)
+        params.require(:food).permit(:title)
       end
     end
   end
