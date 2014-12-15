@@ -8,7 +8,14 @@
 </head>
 <body>
 <div class="container">
+
   <%= yield %>
+
+  <div id="main">  
+    <!-- angular templating. content injected here -->
+    <div ui-view></div>    
+  </div>
+
 </div>
 
 

@@ -1,29 +1,85 @@
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width : 1000px;
+  margin    : 0 auto;
   text-align: center;
 }
 img.designImg {
-  width: 200px;
-  height: 200px;
+  width           : 200px;
+  height          : 200px;
   background-color: tomato;
-  display: inline-block;
-  box-shadow: 1px 1px 1px #999;
-  position: relative;
-  text-decoration: none;
+  display         : inline-block;
+  box-shadow      : 1px 1px 1px #999;
+  position        : relative;
+  text-decoration : none;
 }
 img.designImg:hover{ 
-/*  transition: width 1s;
-   z-index: 100;
-  position: absolute;*/
   box-shadow: 5px 5px 5px #777;
   transition: box-shadow 0.4s;
 }
 
 .nodeco ul li{
-  display: inline-block;
+  display        : inline-block;
   text-decoration: none;
-  margin: 5px;
+  margin         : 5px;
 }
+
+
+/*hover shows image content starts*/
+/**********************************/
+ul.img-list {
+  text-align     : center;
+  list-style-type: none;
+  margin         : 0;
+  padding        : 0;
+}
+ 
+ul.img-list li {
+  display : inline-block;
+  margin  : 0 1em 1em 0;
+  position: relative;
+  height  : 200px;
+  width   : 200px;
+}
+ 
+span.text-content span {
+  display       : table-cell;
+  text-align    : center;
+  vertical-align: middle;
+}
+ 
+ul.img-list li:hover span.text-content {
+  opacity: 1;
+/*  box-shadow: 5px 5px 5px #777;
+  transition: box-shadow 0.4s;*/
+}
+span.text-content {
+  background: rgba(255,99,71,1.0);
+  position  : absolute;
+  cursor    : pointer;
+  color     : white;
+  display   : table;
+  height    : 180px;
+  width     : 180px;
+  padding: 10px;
+  left      : 0;
+  top       : 0;
+  opacity   : 0;
+  -webkit-transition: opacity 800ms;
+  -moz-transition   : opacity 800ms;
+  -o-transition     : opacity 800ms;
+  transition        : opacity 800ms;
+}
+/*hover shows image content ends*/
+/********************************/
+
+
+
+
+
+
+
+
+
+
 
 

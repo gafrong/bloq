@@ -14,6 +14,7 @@ app
           return data;
         });
     };
+    console.log('checking DesignCtrl...')
     getDesigns();
   }])
 

@@ -1,58 +1,16 @@
-<div ng-controller="HeaderCtrl">
-  <h1>{{ outputDesign | uppercase }}</h1>
-</div>
+
+<a ui-sref="/">bloq</a>
+
+
  
-<a href ng-click="goDesign = !goDesign">Design</a>
-<a href ng-click="goTech = !goTech">Tech</a>
-<a href ng-click="goFood = !goFood">Food</a>
-<a href ng-click="goTravel = !goTravel">Travel</a>
-
-<div ng-controller="FoodCtrl" class="nodeco">
-  <ul>
-    <li ng-repeat="food in foods">
-      <img ng-src="{{food.img_url}}" alt="{{food.title}}" ng-show="goFood" class="designImg">
-    </li>
-  </ul>
-</div>
-
-<div ng-controller="TravelCtrl" class="nodeco">
-  <ul>
-    <li ng-repeat="travel in travels">
-      <img ng-src="{{ travel.img_url }}" alt="{{travel.title}}" class="designImg" ng-show="goTravel">      
-    </li>
-  </ul>
-</div>
-
-<div ng-controller="DesignCtrl" class="nodeco">
-  <ul>
-    <li ng-repeat="design in designs">
-      <img ng-src="{{ design.img_url}}" alt="{{deign.info}}" class="designImg" ng-show="goDesign">
-    </li>
-  </ul>
-</div>
-
-<div ng-controller="TechCtrl" class="nodeco">
-  <ul>
-    <li ng-repeat="tech in techs">
-      <img ng-src="{{ tech.img_url}}" alt="{{tech.title}}" class="designImg" ng-show="goTech">
-    </li>
-  </ul>
-</div>
+ <a ui-sref ="design" ng-click="goDesign = !goDesign">Design</a>
+ <a ui-sref ="tech" ng-click="goTech = !goTech">Tech</a>
+ <a ui-sref ="food" ng-click="goFood = !goFood">Food</a>
+ <a ui-sref ="travel" ng-click="goTravel = !goTravel">Travel</a>
+ 
 
 
-
-
-<!-- using rails to populate image
-<div ng-controller="HeaderCtrl">
-  
-  <h1>{{outputDesign}}</h1>
-
-    <% @show_all.each do |image| %>
-      <img src="<%= image.img_url %>" class="designImg">
-    <% end %>  
-</div>
- -->
-  
+<%#= render 'ctrls' %>
 
 
 

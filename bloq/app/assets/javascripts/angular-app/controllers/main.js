@@ -1,4 +1,4 @@
 app
   .controller('HeaderCtrl', ['$scope', function($scope){
-    $scope.outputDesign = 'bloq'
+    $scope.outputLogo = 'bloq'
   }])
