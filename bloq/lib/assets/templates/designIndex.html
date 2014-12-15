@@ -1,0 +1,13 @@
+<h2>{{title}}</h2>  
+  
+<div ng-controller="DesignCtrl" class="nodeco">
+  <ul class="img-list">
+    <li ng-repeat="design in designs">
+      <img ng-src="{{ design.img_url}}" alt="{{deign.info}}" class="designImg" title="{{design.info}}">
+      <span class="text-content"><span>{{design.info}}</span></span>
+    </li>
+  </ul>
+</div>
+
+
+
