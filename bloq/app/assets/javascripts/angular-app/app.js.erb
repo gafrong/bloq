@@ -15,17 +15,17 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
       })
       .state('tech', {
         url        : '/tech',
-        templateUrl: "/assets/templates/techIndex.html",
+        templateUrl: "<%= asset_path 'templates/techIndex.html' %>",
         controller : 'TechCtrl'
       }) 
       .state('food', {
         url        : '/food',
-        templateUrl: "/assets/templates/foodIndex.html",
+        templateUrl: "<%= asset_path 'templates/foodIndex.html' %>",
         controller : 'FoodCtrl'
       }) 
       .state('travel', {
         url        : '/travel',
-        templateUrl: "/assets/templates/travelIndex.html",
+        templateUrl: "<%= asset_path 'templates/travelIndex.html' %>",
         controller : 'TravelCtrl'
       })
 
