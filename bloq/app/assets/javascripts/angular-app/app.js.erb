@@ -10,12 +10,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
       })
       .state('design', {
         url        : '/design',
-        templateUrl: "<%= asset_path '/assets/templates/designIndex.html' %>",
+        templateUrl: "<%= asset_path '/templates/designIndex.html' %>",
         controller : 'DesignCtrl'
       })
       .state('tech', {
         url        : '/tech',
-        templateUrl: "http://www.blog.herokuapp.com:port/assets/templates/techIndex.html",
+        templateUrl: "/assets/templates/techIndex.html",
         controller : 'TechCtrl'
       }) 
       .state('food', {
