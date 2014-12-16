@@ -1,8 +1,8 @@
 class DesignsController < ApplicationController
 
   def index
-    @designs = Design.all
-
+    @designs  = Design.all
+    
     @show_all = @designs
 
     # render json: @show_all

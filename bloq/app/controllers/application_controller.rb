@@ -6,12 +6,11 @@ class ApplicationController < ActionController::Base
   before_action :set_headers
 
   def index
-
-    @designs = Design.all
-    @travels = Travel.all
-    @foods = Food.all
-    @techs = Tech.all
-
+    
+    @designs  = Design.all
+    @travels  = Travel.all
+    @foods    = Food.all
+    @techs    = Tech.all
     @show_all = (@travels + @designs + @foods + @techs).shuffle
 
     respond_to do |format|
@@ -24,13 +23,13 @@ class ApplicationController < ActionController::Base
     if request.headers["HTTP_ORIGIN"]
     # better way check origin
     # if request.headers["HTTP_ORIGIN"] && /^https?:\/\/(.*)\.some\.site\.com$/i.match(request.headers["HTTP_ORIGIN"])
-      headers['Access-Control-Allow-Origin'] = request.headers["HTTP_ORIGIN"]
-      headers['Access-Control-Expose-Headers'] = 'ETag'
-      headers['Access-Control-Allow-Methods'] = 'GET, POST, PATCH, PUT, DELETE, OPTIONS, HEAD'
-      headers['Access-Control-Allow-Headers'] = '*'
-      headers['Access-Control-Max-Age'] = '86400'
+      headers['Access-Control-Allow-Origin']      = request.headers["HTTP_ORIGIN"]
+      headers['Access-Control-Expose-Headers']    = 'ETag'
+      headers['Access-Control-Allow-Methods']     = 'GET, POST, PATCH, PUT, DELETE, OPTIONS, HEAD'
+      headers['Access-Control-Allow-Headers']     = '*'
+      headers['Access-Control-Max-Age']           = '86400'
       headers['Access-Control-Allow-Credentials'] = 'true'
-    end
+      end
   end
   
 end

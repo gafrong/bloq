@@ -1,8 +1,8 @@
 class FoodsController < ApplicationController
 
   def index
-    @foods = Food.all 
-
+    @foods    = Food.all 
+    
     @show_all = @foods.shuffle
 
     respond_to do |format|
