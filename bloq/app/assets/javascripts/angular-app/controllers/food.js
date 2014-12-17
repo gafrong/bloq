@@ -1,6 +1,6 @@
 app
   .controller('FoodCtrl', ['$http', '$scope', function($http, $scope){
-    $scope.title = "Food";
+    $scope.title = "food";
     $scope.foods = [];
     var getFoods = function () {
       $http.get('/api/v1/foods')

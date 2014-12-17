@@ -1,6 +1,6 @@
 app
   .controller('TechCtrl', ['$http', '$scope', function($http, $scope){
-    $scope.title = "Tech";
+    $scope.title = "tech";
     $scope.designs = [];
     var getTechs = function () {
       $http.get('/api/v1/techs')

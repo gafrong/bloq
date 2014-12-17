@@ -1,6 +1,6 @@
 app
   .controller('TravelCtrl', ['$http', '$scope', function($http, $scope){
-    $scope.title = "Travel";
+    $scope.title = "travel";
     $scope.travels = [];
     var getTravels = function () {
       $http.get('/api/v1/travels')

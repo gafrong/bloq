@@ -1,6 +1,6 @@
 app
   .controller('DesignCtrl', ['$http', '$scope', function($http, $scope){
-    $scope.title = "Design";
+    $scope.title = "design";
     $scope.designs = [];
     var getDesigns = function () {
       $http.get('/api/v1/designs')
@@ -14,6 +14,7 @@ app
           return data;
         });
     };
+    
     console.log('checking DesignCtrl...')
     getDesigns();
   }])
