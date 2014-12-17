@@ -193,14 +193,17 @@ body {
   background-color: orange;
 }
 @mixin navtab {
-/*  padding-bottom: 0.1em;*/
   padding-top   : 2.7em;
   font-size     : 2em;
   height        : 4.3em;
   width         : 7em;
   }
 #logo {
-  @include navtab;
+  width: 3.5em;
+  height: 2em;
+  padding-top: 0.9em;
+  padding-bottom: 0.6em;
+  font-size: 4em;
 
 /*  padding-top: 1.5em;
   padding-bottom: 1em;*/
