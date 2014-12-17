@@ -6,7 +6,7 @@ app
       $http.get('/api/v1/foods')
         .success(function(data){
           console.log(data);
-          $scope.foods = data;
+          $scope.foods = _.shuffle(data);
         })
         .error(function(data){
           console.log('error', data);

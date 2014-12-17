@@ -6,8 +6,8 @@ app
       $http.get('/api/v1/designs')
         .success(function(data){
           console.log(data);
-          $scope.designs = data;
-          // window.designs = $scope.designs;
+          $scope.designs = _.shuffle(data);
+          //window.designs = _.shuffle($scope.designs);
         })
         .error(function(data){
           console.log('error', data);
@@ -17,5 +17,6 @@ app
     console.log('checking DesignCtrl...')
     getDesigns();
   }])
+
 
  
