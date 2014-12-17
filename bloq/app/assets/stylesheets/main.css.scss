@@ -13,12 +13,12 @@ a {
   text-align: center;
 }
 img.designImg {
+  @include box-shadow(2px);
+  display         : inline-block;
+  position        : relative;
+  background-color: tomato;
   width           : 200px;
   height          : 200px;
-  background-color: tomato;
-  display         : inline-block;
-  box-shadow      : 1px 1px 1px #999;
-  position        : relative;
   text-decoration : none;
 }
 img.designImg:hover{ 
@@ -80,30 +80,43 @@ span.text-content {
 }
 /*hover shows image content ends*/
 /********************************/
+
+/*navbar*/
 @mixin navtab {
-  background-color: rgba(255,99,71,1.0);
-  width: 80px;
-  height: 80px;
+  @include box-shadow(1px);
+  text-decoration: none;
   margin-bottom: 2px;
+  padding-top: 30px;
   z-index: 999;
+  height: 50px;
+  width: 80px;
+  color: #fff;
 }
 
 #logo {
-  @include navtab;
-  @include box-shadow(1px);
-  /*position: fixed;*/
- /* display: inline-block;*/
+  background-color: rgba(255,99,71,1.0);
+  @include navtab; 
+}
+#logo:hover{
+  transition: box-shadow 0.2s ease-in-out 0.2s;
+  @include box-shadow(3px);
 }
 #design, #tech, #food, #travel{
-  @extend #logo;
-  @include box-shadow(1px);
-  background-color: rgba(255,99,71,0.98);
-
+  background-color: rgba(255,99,71,0.97);
+  @include box-shadow(2px);
+  @include navtab;
+  color: white;
 }
-
+#design:hover, #tech:hover, #food:hover, #travel:hover {
+  background-color: #fff;
+  color: #666;
+}
+a {
+  text-decoration: none;
+}
 #show-nav{
-  z-index: 999;
   position: absolute;
+  z-index: 999;
 }
 
 
