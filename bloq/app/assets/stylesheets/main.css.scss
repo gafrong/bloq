@@ -189,10 +189,29 @@ h6.title {
 
 
 @media all and (max-width: 62em) {
-  body {
-    background-color: orange;
-  }
+body {
+  background-color: orange;
 }
+@mixin navtab {
+/*  padding-bottom: 0.1em;*/
+  padding-top   : 2.7em;
+  font-size     : 2em;
+  height        : 4.3em;
+  width         : 7em;
+  }
+#logo {
+  @include navtab;
+
+/*  padding-top: 1.5em;
+  padding-bottom: 1em;*/
+}
+#design, #tech, #food, #travel{
+  @include navtab;
+}
+
+
+
+}   /*ends media query for iphone*/
 
 
 
