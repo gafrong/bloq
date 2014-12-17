@@ -199,21 +199,45 @@ body {
   width         : 7em;
   }
 #logo {
+  padding-bottom: 0.6em;
+  padding-top: 0.9em;
+  font-size: 4em;
   width: 3.5em;
   height: 2em;
-  padding-top: 0.9em;
-  padding-bottom: 0.6em;
-  font-size: 4em;
-
-/*  padding-top: 1.5em;
-  padding-bottom: 1em;*/
 }
 #design, #tech, #food, #travel{
   @include navtab;
 }
+ul.img-list {
+  margin-top: 2em;
+}
 
+img.designImg {
+  @include box-shadow(2px);
+  background-color: tomato;
+  width           : 30em;
+  height          : 30em;
+}
 
+ul.img-list li {
+  height  : 30em;
+  width   : 30em;
+}
 
+span.text-content {
+  font-size: 2.5em;
+
+  height    : 10em;
+  width     : 10em;
+  padding   : 1em;
+  left      : 0;
+  top       : 0;
+  opacity   : 0;
+  -webkit-transition: opacity 800ms;
+  -moz-transition   : opacity 800ms;
+  -o-transition     : opacity 800ms;
+  transition        : opacity 800ms;
+}
 }   /*ends media query for iphone*/
 
 
