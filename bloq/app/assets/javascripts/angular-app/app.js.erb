@@ -1,4 +1,5 @@
-var app = angular.module('app', ['ui.router', 'ngResource']);
+var app = angular.module('app', ['ui.router', 'ngResource', 'ngAnimate']);
+
 
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
@@ -28,5 +29,18 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         templateUrl: "<%= asset_path 'templates/travelIndex.html' %>",
         controller : 'TravelCtrl'
       })
-
+      .state("foo", {
+        url: "/foo",
+        template: '<h1>foo</h1>'
+      })
+      .state("bar", {
+          url: "/bar",
+          template: '<h1>bar</h1>'
+      })
   }]);
+
+
+
+
+    
+
