@@ -12,7 +12,7 @@
   <div id="login-menu">
     <% if user_signed_in? %>
       <div id="log-menu">
-        <div id="edit-menu"><%= link_to "edit profile", edit_user_registration_path %></div>
+        <div id="edit-menu"><%= link_to "edit", edit_user_registration_path %></div>
         <div id="logout-menu"><%= link_to "logout", destroy_user_session_path, method: :delete %></div>
       </div>  
     <% else %>  
