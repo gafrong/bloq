@@ -200,7 +200,7 @@ li i.mdi-action-exit-to-app {
 /*li:focus > a i.mdi-action-exit-to-app { 
   display: block;
 }*/
-li:hover i.mdi-action-exit-to-app, li:active i.mdi-action-exit-to-app { 
+li:hover i.mdi-action-exit-to-app { 
   display: block;
 }
 li i.mdi-action-exit-to-app:hover {
@@ -309,9 +309,9 @@ li i.mdi-action-exit-to-app {
   display: block;
 }
 
-/*li:active > i {
+li:active > i {
   display:block; 
-}*/
+}
 
 
 } /*ends media query for iphone*/
