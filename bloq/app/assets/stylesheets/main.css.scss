@@ -235,10 +235,11 @@ li i.mdi-action-exit-to-app:hover {
   margin-top: 1em;
 }
 #design-box, #tech-box, #food-box, #travel-box {
-  @include box-shadow(3px);
+  @include box-shadow(1px);
   background-color: #fff;
+  font-size: 2em;
   margin          : 0.5em;
-  padding         : 5em;
+  padding         : 3em;
   color           : tomato;
 }
 #design-box:hover, #tech-box:hover, #food-box:hover, #travel-box:hover{
@@ -263,19 +264,20 @@ ul.img-list {
   margin-top: 1.1em;
 }
 img.designImg {
-  @include box-shadow(3px);
+  @include box-shadow(5px);
   background-color: tomato;
-  width           : 24em;
-  height          : 24em;
+  width           : 22em;
+  height          : 22em;
+  margin-bottom: 1.2em;
 }
 ul.img-list li {
-  height  : 24em;
-  width   : 24em;
+  height  : 22em;
+  width   : 22em;
 }
 span.text-content {
   font-size: 1.1em;
-  height   : 14em;
-  width    : 14em;
+  height   : 12.1em;
+  width    : 12.2em;
   padding  : 4em;
   left     : 0;
   top      : 0;
@@ -287,12 +289,18 @@ span.text-content {
 }
 a i.mdi-action-exit-to-app {
   position   : absolute;
-  margin-left: 0.2em;
-  margin-top : -0.9em;
+  margin-left: 0.4em;
+  margin-top : -1.2em;
   font-size  : 3em;
   color      : #fff;
 }
-
+#four-box {
+  margin-top: 7em;
+}
+#design-box, #tech-box, #food-box, #travel-box{
+  font-size: 1em;
+  padding: 4em;
+}
 } /*ends media query for iphone*/
 
 /*
