@@ -5,6 +5,7 @@
     <li ng-repeat="tech in techs">
       <img ng-src="{{ tech.img_url}}" alt="{{tech.title}}" class="designImg" title="{{tech.title}}">
       <span class="text-content"><span>{{tech.title}}</span></span>
+      <a href="{{tech.link_url}}" class="goto"><i class="mdi-action-exit-to-app"></i></a>
     </li>
   </ul>
 </div>

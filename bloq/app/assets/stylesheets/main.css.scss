@@ -1,5 +1,3 @@
-
-
 @mixin box-shadow($px){
   box-shadow: $px $px $px #999;
 }
@@ -19,8 +17,8 @@ img.designImg {
   display         : inline-block;
   position        : relative;
   background-color: tomato;
-  width           : 200px;
-  height          : 200px;
+  width           : 14em;
+  height          : 14em;
   text-decoration : none;
 }
 img.designImg:hover{ 
@@ -49,8 +47,8 @@ ul.img-list li {
   display : inline-block;
   margin  : 0 1em 1em 0;
   position: relative;
-  height  : 200px;
-  width   : 200px;
+  height  : 14em;
+  width   : 14em;
 }
  
 span.text-content span {
@@ -70,8 +68,8 @@ span.text-content {
   cursor    : pointer;
   color     : white;
   display   : table;
-  height    : 180px;
-  width     : 180px;
+  height    : 12.7em;
+  width     : 12.7em;
   padding   : 10px;
   left      : 0;
   top       : 0;
@@ -181,29 +179,58 @@ a.goto {
   margin-left: 80px;
 }
 h6.title {
-  position   : fixed;
-  margin-left: 95px;
+  position   : absolute;
   margin-top : -56px;
-  color: #c5c5c5;
+  margin-left: 95px;
+  color      : #c5c5c5;
+}
+
+a i.mdi-action-exit-to-app {
+  position   : absolute;
+  margin-left: -0.6em;
+  margin-top : -0.4em;
+  font-size  : 2em;
+  color      : #fff;
+}
+li i.mdi-action-exit-to-app { 
+  color: orange;
+  display: none;
+}
+/*li i.mdi-action-exit-to-app { display: none; };*/
+li:hover i.mdi-action-exit-to-app { 
+  color: #fff; 
+  display: block;
+}
+li i.mdi-action-exit-to-app:hover {
+  color: #fc2500;
 }
 
 
-@media all and (max-width: 62em) {
-body {
-  background-color: orange;
+/*************media queries
+***************************/
+
+@media all and (max-width: 62em) and (orientation: portrait) {
+
+h6.title {
+  position   : fixed;
+  margin-left: 8.5em;
+  margin-top : -5.4em;
+  font-size: 1.8em;
+  color: #c5c5c5;
 }
 @mixin navtab {
   padding-top   : 2.7em;
   font-size     : 2em;
   height        : 4.3em;
   width         : 7em;
-  }
+}
+
 #logo {
   padding-bottom: 0.6em;
-  padding-top: 0.9em;
-  font-size: 4em;
-  width: 3.5em;
-  height: 2em;
+  padding-top   : 0.9em;
+  font-size     : 4em;
+  width         : 3.5em;
+  height        : 2em;
 }
 #design, #tech, #food, #travel{
   @include navtab;
@@ -223,23 +250,37 @@ ul.img-list li {
   height  : 30em;
   width   : 30em;
 }
-
 span.text-content {
-  font-size: 2.5em;
-
-  height    : 10em;
-  width     : 10em;
-  padding   : 1em;
-  left      : 0;
-  top       : 0;
-  opacity   : 0;
+  font-size: 2em;
+  height   : 13em;
+  width    : 13.1em;
+  padding  : 1em;
+  left     : 0;
+  top      : 0;
+  opacity  : 0;
   -webkit-transition: opacity 800ms;
   -moz-transition   : opacity 800ms;
   -o-transition     : opacity 800ms;
   transition        : opacity 800ms;
 }
-}   /*ends media query for iphone*/
+[ui-view].ng-leave-active {
+  opacity: 0;
+  -webkit-transform:translate3d(50em, 0, 0);
+  -moz-transform   :translate3d(50em, 0, 0);
+  transform        :translate3d(50em, 0, 0);
+}
 
+a i.mdi-action-exit-to-app {
+  position   : absolute;
+  margin-left: 1.2em;
+  margin-top : -1em;
+  font-size  : 3.4em;
+  color      : #fff;
+}
+
+
+
+} /*ends media query for iphone*/
 
 
 

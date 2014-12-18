@@ -5,6 +5,7 @@
     <li ng-repeat="food in foods">
       <img ng-src="{{ food.img_url}}" alt="{{food.title}}" class="designImg" title="{{food.title}}">
       <span class="text-content"><span>{{food.title}}</span></span>
+      <a href="{{food.link_url}}" class="goto"><i class="mdi-action-exit-to-app"></i></a>
     </li>
   </ul>
 </div>

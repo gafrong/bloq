@@ -5,6 +5,9 @@
     <li ng-repeat="travel in travels">
       <img ng-src="{{ travel.img_url}}" alt="{{travel.title}}" class="designImg" title="{{travel.title}}">
       <span class="text-content"><span>{{travel.title}}</span></span>
+      <a href="{{travel.link_url}}" class="goto"><i class="mdi-action-exit-to-app"></i></a>
     </li>
   </ul>
 </div>
+
+
