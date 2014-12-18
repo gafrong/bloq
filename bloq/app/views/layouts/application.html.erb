@@ -8,9 +8,26 @@
 </head>
 <body>
 
+ <!--  devise  -->  
+  <div id="login-menu">
+    <% if user_signed_in? %>
+      <div id="log-menu">
+        <div id="edit-menu"><%= link_to "edit profile", edit_user_registration_path %></div>
+        <div id="logout-menu"><%= link_to "logout", destroy_user_session_path, method: :delete %></div>
+      </div>  
+    <% else %>  
+      <div id="login-menu"><%= link_to "Login", new_user_session_path %></div>    
+      <div id="signup-menu"><%= link_to "Sign Up", new_user_registration_path %></div>
+    <% end %>
+  </div>
 <div class="container">
 
+
+
   <%= yield %>
+ 
+
+
 
   <div id="main">  
     <!-- angular templating. content injected here -->

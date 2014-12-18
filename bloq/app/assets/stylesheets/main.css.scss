@@ -205,6 +205,27 @@ li i.mdi-action-exit-to-app:hover {
   color: #fc2500;
 }
 
+#login-menu, #edit-menu, #logout-menu, #login-menu, #signup-menu{
+  display: inline-block;
+  text-align: right;
+  float: right;
+  position: relative;
+  margin-top: 1.3em;
+  margin-right: 0.5em;
+  font-size: 0.98em;
+}
+#logout-menu a {
+  color: tomato;
+}
+#edit-menu a {
+  color: tomato;
+}
+/*.log-menu {
+  float: right;
+  text-align: right;
+}*/
+
+
 
 /*************media queries
 ***************************/
