@@ -41,7 +41,7 @@ ul.img-list {
   margin         : 0;
   padding        : 0;
   margin-top     : 10px;
-  margin-left: 0.8em;
+  margin-left    : 0.8em;
   }
  
 ul.img-list li {
@@ -194,17 +194,18 @@ a i.mdi-action-exit-to-app {
   color      : #fff;
 }
 li i.mdi-action-exit-to-app { 
-  color  : orange;
+  color  : #fff; 
   display: none;
 }
 /*li i.mdi-action-exit-to-app { display: none; };*/
 li:hover i.mdi-action-exit-to-app { 
-  color  : #fff; 
   display: block;
 }
 li i.mdi-action-exit-to-app:hover {
   color: #fc2500;
 }
+
+
 
 #login-menu, #edit-menu, #logout-menu, #login-menu, #signup-menu{
   display     : inline-block;
@@ -238,7 +239,7 @@ li i.mdi-action-exit-to-app:hover {
 #design-box, #tech-box, #food-box, #travel-box {
   @include box-shadow(1px);
   background-color: #fff;
-  font-size: 2em;
+  font-size       : 2em;
   margin          : 0.5em;
   padding         : 3em;
   color           : tomato;
@@ -302,23 +303,16 @@ a i.mdi-action-exit-to-app {
   font-size: 1em;
   padding: 4em;
 }
-} /*ends media query for iphone*/
-
-/*
 
 
-
-
-
-
-[ui-view].ng-leave-active {
-  opacity: 0;
-  -webkit-transform:translate3d(50em, 0, 0);
-  -moz-transform   :translate3d(50em, 0, 0);
-  transform        :translate3d(50em, 0, 0);
+li:active > i {
+  display:block;
+  color  : #fff; 
 }
 
-*/
+
+} /*ends media query for iphone*/
+
 
 
 
