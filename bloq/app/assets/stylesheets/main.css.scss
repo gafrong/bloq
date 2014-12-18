@@ -197,14 +197,13 @@ li i.mdi-action-exit-to-app {
   color  : #fff; 
   display: none;
 }
-/*li i.mdi-action-exit-to-app { display: none; };*/
+
 li:hover i.mdi-action-exit-to-app { 
   display: block;
 }
 li i.mdi-action-exit-to-app:hover {
   color: #fc2500;
 }
-
 
 
 #login-menu, #edit-menu, #logout-menu, #login-menu, #signup-menu{
@@ -295,6 +294,7 @@ a i.mdi-action-exit-to-app {
   margin-top : -1.2em;
   font-size  : 3em;
   color      : #fff;
+  display: none;
 }
 #four-box {
   margin-top: 7em;
@@ -303,12 +303,14 @@ a i.mdi-action-exit-to-app {
   font-size: 1em;
   padding: 4em;
 }
-
-
-li:active > i {
-  display:block;
+/*li i.mdi-action-exit-to-app { 
   color  : #fff; 
-}
+  
+}*/
+
+/*li:active > i {
+  display:block; 
+}*/
 
 
 } /*ends media query for iphone*/
