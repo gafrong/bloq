@@ -257,52 +257,26 @@ li i.mdi-action-exit-to-app:hover {
 /*************media queries
 ***************************/
 
-/*@media all and (max-width: 62em) and (orientation: portrait) {
+@media all and (max-width: 62em) and (orientation: portrait) {
 
-h6.title {
-  position   : fixed;
-  margin-left: 8.5em;
-  margin-top : -5.4em;
-  font-size: 1.8em;
-  color: #c5c5c5;
-}
-@mixin navtab {
-  padding-top   : 2.7em;
-  font-size     : 2em;
-  height        : 4.3em;
-  width         : 7em;
-}
-
-#logo {
-  padding-bottom: 0.6em;
-  padding-top   : 0.9em;
-  font-size     : 4em;
-  width         : 3.5em;
-  height        : 2em;
-}
-#design, #tech, #food, #travel{
-  @include navtab;
-}
 ul.img-list {
-  margin-top: 2em;
+  margin-top: 1.1em;
 }
-
 img.designImg {
-  @include box-shadow(2px);
+  @include box-shadow(3px);
   background-color: tomato;
-  width           : 30em;
-  height          : 30em;
+  width           : 24em;
+  height          : 24em;
 }
-
 ul.img-list li {
-  height  : 30em;
-  width   : 30em;
+  height  : 24em;
+  width   : 24em;
 }
 span.text-content {
-  font-size: 2em;
-  height   : 13em;
-  width    : 13.1em;
-  padding  : 1em;
+  font-size: 1.1em;
+  height   : 14em;
+  width    : 14em;
+  padding  : 4em;
   left     : 0;
   top      : 0;
   opacity  : 0;
@@ -311,6 +285,23 @@ span.text-content {
   -o-transition     : opacity 800ms;
   transition        : opacity 800ms;
 }
+a i.mdi-action-exit-to-app {
+  position   : absolute;
+  margin-left: 0.2em;
+  margin-top : -0.9em;
+  font-size  : 3em;
+  color      : #fff;
+}
+
+} /*ends media query for iphone*/
+
+/*
+
+
+
+
+
+
 [ui-view].ng-leave-active {
   opacity: 0;
   -webkit-transform:translate3d(50em, 0, 0);
@@ -318,18 +309,7 @@ span.text-content {
   transform        :translate3d(50em, 0, 0);
 }
 
-a i.mdi-action-exit-to-app {
-  position   : absolute;
-  margin-left: 1.2em;
-  margin-top : -1em;
-  font-size  : 3.4em;
-  color      : #fff;
-}
-
-
-
-}*/ /*ends media query for iphone*/
-
+*/
 
 
 
