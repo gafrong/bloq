@@ -225,8 +225,39 @@ li i.mdi-action-exit-to-app:hover {
   text-align: right;
 }*/
 
-
-
+.devise-format {
+  width: 18em;
+  margin: 5em auto;
+  color: #888;
+}
+#top-two{
+  display: inline-block;
+  margin-top: 1em;
+}
+#bottom-two{
+  display: inline-block;
+  margin-top: 1em;
+}
+#design-box, #tech-box, #food-box, #travel-box {
+  background-color: #fff;
+  margin: 0.5em;
+  padding: 5em;
+  color: tomato;
+  @include box-shadow(3px);
+}
+#design-box:hover, #tech-box:hover, #food-box:hover, #travel-box:hover{
+  @include box-shadow(7px);
+  -webkit-transition:all 0.3s ease-in-out;
+  -moz-transition   :all 0.3s ease-in-out;
+  -o-transition     :all 0.3s ease-in-out;
+  transition        :all 0.3s ease-in-out;
+}
+#four-box {
+  margin-top: 2em;
+}
+#tech-box, #travel-box {
+  margin-top: 1em;
+}
 /*************media queries
 ***************************/
 
