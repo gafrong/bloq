@@ -195,7 +195,7 @@ a i.mdi-action-exit-to-app {
 }
 li i.mdi-action-exit-to-app { 
   color  : #fff; 
-  display: block;
+  display: none;
 }
 /*li:focus > a i.mdi-action-exit-to-app { 
   display: block;
@@ -308,7 +308,6 @@ li i.mdi-action-exit-to-app {
   color  : #fff; 
   display: block;
 }
-
 
 li:active > i {
   display:block; 
