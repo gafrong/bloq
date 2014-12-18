@@ -197,8 +197,10 @@ li i.mdi-action-exit-to-app {
   color  : #fff; 
   display: none;
 }
-
-li:hover i.mdi-action-exit-to-app { 
+/*li:focus > a i.mdi-action-exit-to-app { 
+  display: block;
+}*/
+li:hover i.mdi-action-exit-to-app, li:active i.mdi-action-exit-to-app { 
   display: block;
 }
 li i.mdi-action-exit-to-app:hover {
@@ -294,7 +296,6 @@ a i.mdi-action-exit-to-app {
   margin-top : -1.2em;
   font-size  : 3em;
   color      : #fff;
-  display: block;
 }
 #four-box {
   margin-top: 7em;
@@ -305,7 +306,7 @@ a i.mdi-action-exit-to-app {
 }
 /*li i.mdi-action-exit-to-app { 
   color  : #fff; 
-  
+  display: block;
 }*/
 
 /*li:active > i {
