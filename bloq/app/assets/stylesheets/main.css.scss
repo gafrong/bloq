@@ -84,6 +84,9 @@ span.text-content {
 /********************************/
 
 /*navbar*/
+a {
+  text-decoration: none;
+}
 @mixin navtab {
   @include box-shadow(1px);
   text-decoration: none;
@@ -94,7 +97,6 @@ span.text-content {
   z-index        : 999;
   margin-bottom  : 2px;
 }
-
 #logo {
   background-color: rgba(255,99,71,1.0);
   @include navtab; 
@@ -105,16 +107,13 @@ span.text-content {
 }
 #design, #tech, #food, #travel{
   background-color: rgba(255,99,71,1.0);
+  color           : white;
   @include box-shadow(2px);
   @include navtab;
-  color: white;
 }
 #design:hover, #tech:hover, #food:hover, #travel:hover {
   background-color: #fff;
   color: #666;
-}
-a {
-  text-decoration: none;
 }
 #show-nav{
   position: absolute;
@@ -263,7 +262,7 @@ li i.mdi-action-exit-to-app:hover {
 #slogan{
   color     : rgba(255,99,71,1.0);
   font-size : 2em;
-  margin-top: 4em;
+  margin-top: 5em;
 }
 #start-go {
   background-color: rgba(255,99,71,1.0);

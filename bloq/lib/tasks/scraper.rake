@@ -6,6 +6,7 @@ namespace :scraper do
     require 'open-uri'
     require 'nokogiri'
     require 'csv'
+    require 'pry'
 
     # design data scrape
     url = "http://www.wallpaper.com/design"
@@ -32,34 +33,6 @@ namespace :scraper do
       @design.save
     end
 
-    # travel data scrape
-    url_travel = "http://www.wallpaper.com/travel"
-    page_travel = Nokogiri::HTML(open(url_travel))
-
-    info_travel = []
-    img_travel = []
-    link_travel = []
-
-    page_travel.css('div.news.span3 a').each do |line|
-      info_travel << line.text.strip
-    end
-
-    page_travel.css('div.news img').each do |line|
-      img_travel << line.to_s.slice(25..-3)
-    end
-
-    link_travel = page_travel.css('div.news.span3 a').map {|link| "http://www.wallpaper.com" + link["href"]}
-
-    info_travel.reject!(&:empty?)
-    link_travel.uniq!
-
-    info_travel.length.times do |i|
-      @travel = Travel.new
-      @travel.title = info_travel[i]
-      @travel.img_url = img_travel[i]
-      @travel.link_url = link_travel[i*2]
-      @travel.save
-    end
 
     # food data scrape
     url_food = "http://www.theworlds50best.com/"
@@ -113,6 +86,41 @@ namespace :scraper do
       @tech.link_url = link_tech[i]
       @tech.save
     end
+  
+    # travel data scrape
+    url_travel = "http://www.luxurytravelmagazine.com"
+    page_travel = Nokogiri::HTML(open(url_travel))
+
+    info_travel = []
+    img_travel = []
+    link_travel = []
+
+    page_travel.css('img.f-left').each do |line|
+      info_travel << line['alt']
+    end
+
+    page_travel.css('img.f-left').each do |line|
+      img_travel << "http://www.luxurytravelmagazine.com" + line['src']
+    end
+
+    # link_travel = page_travel.css('td[style="padding:0px 5px 10px 1px;"] a').map
+
+    page_travel.css('td[style="padding:0px 5px 10px 1px;"] a').each do |line|
+      link_travel << "http://luxurytravelmagazine.com" + line["href"]
+    end
+
+    info_travel.reject!(&:empty?)
+    link_travel.uniq!
+    link_travel.delete("http://luxurytravelmagazine.comhttp://www.ritzcarlton.com/en/Properties/Kyoto/Reservations/Packages/Default.htm")
+
+    info_travel.length.times do |i|
+      @travel = Travel.new
+      @travel.title = info_travel[i]
+      @travel.img_url = img_travel[i]
+      @travel.link_url = link_travel[i*2]
+      @travel.save
+    end
+
   end
 
   desc "TODO"
